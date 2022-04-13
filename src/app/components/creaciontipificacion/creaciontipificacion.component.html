@@ -1,0 +1,39 @@
+<div class="card">
+     
+  <form action="">
+    
+    <label>Nombre</label>
+      <input type="text" name="nombre" [(ngModel)]="estudiante.nombre" placeholder="Escriba Su Nombre" class="form-control" autofocus>
+  
+      <label>Apellido</label>
+      <textarea name="apellido" [(ngModel)]="estudiante.apellido" rows="2" placeholder="Escriba su Apellido" class="form-control"></textarea>
+    
+
+      <label>Cedula</label>
+      <input type="url" name="cedula" [(ngModel)]="estudiante.cedula" placeholder="Escriba su Cedula" class="form-control">
+    
+
+      <label>Correo</label>
+      <input type="text" name="estudiante" id="" [(ngModel)]="estudiante.correo" class="form-control input-sm">
+    
+      <label>Profesor</label>
+      <input type="text" name="profesor" id="" [(ngModel)]="estudiante.profesor" class="form-control input-sm">
+
+    <button class="btn btn-success btn-block" (click)="CrearEstudiante()">
+      CREAR NUEVO ESTUDIANTE
+    </button>
+    <BR>
+      <BR>
+    <button
+    type="submit"
+    class="btn btn-success btn-block"
+    (click)="update()"
+  >
+    GUARDAR LA EDICIÓN 
+  </button>
+
+  </form>
+</div>
+
+
+  

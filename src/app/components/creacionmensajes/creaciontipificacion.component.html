@@ -1,0 +1,39 @@
+<div class="card">
+     
+  <form action="">
+    
+    <label>palabra1</label>
+      <input type="text" name="nombre" [(ngModel)]="mensaje.palabra1" placeholder="Escriba Su Nombre" class="form-control" autofocus>
+  
+      <label>palabra2</label>
+      <textarea name="apellido" [(ngModel)]="mensaje.palabra2" rows="2" placeholder="Escriba su Apellido" class="form-control"></textarea>
+    
+
+      <label>palabra3</label>
+      <input type="url" name="cedula" [(ngModel)]="mensaje.palabra3" placeholder="Escriba su Cedula" class="form-control">
+    
+
+      <label>palabra4</label>
+      <input type="text" name="estudiante" id="" [(ngModel)]="mensaje.palabra4" class="form-control input-sm">
+    
+      <label>palabra5</label>
+      <input type="text" name="profesor" id="" [(ngModel)]="mensaje.palabra5" class="form-control input-sm">
+
+    <button class="btn btn-success btn-block" (click)="CrearEstudiante()">
+      HAGA CLIC PARA GUARDAR EL MENSAJE CREADO
+    </button>
+    <BR>
+      <BR>
+    <button
+    type="submit"
+    class="btn btn-success btn-block"
+    (click)="update()"
+  >
+    GUARDAR LA EDICIÓN DEL MENSAJE
+  </button>
+
+  </form>
+</div>
+
+
+  

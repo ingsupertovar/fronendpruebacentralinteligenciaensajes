@@ -1,0 +1,71 @@
+
+<div class="w3-container">
+
+<div class="w3-center"><br>
+<div class="col-4">
+    <div class="card-header" >
+        <H1>ESTUDIANTES</H1>
+    </div>
+    <a  [routerLink]="['/crubtipificacion/edit', estudiante.id]" class="btn btn-info btn-block">
+      AGREGAR NUEVO ESTUDIANTE
+    </a>
+<table class="table">
+  
+
+
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Cedula</th>
+        <th scope="col">Correo</th>
+        <th scope="col">Profesor</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let estudiante of estudiantes">
+          <td>{{estudiante.id}}</td>
+            <td>{{estudiante.nombre}}</td>
+          <td>{{estudiante.apellido}}</td>
+          <td>{{estudiante.cedula}}</td>
+          <td>{{estudiante.correo}}</td>
+          <td>{{estudiante.profesor}}</td>
+
+          <td>
+            <a  [routerLink]="['/crubtipificacion/edit', estudiante.id]" class="btn btn-info btn-block">
+              EDITAR 
+            </a>
+          </td>
+        <td>
+          <a  (click)="deleteT(estudiante.id)" class="btn btn-info btn-block">
+            ELIMINAR
+          </a>
+        
+          </td>
+
+
+        </tr>
+     
+    </tbody>
+  </table>
+</div>
+</div>
+
+
+
+
+<div class="fileContainer">
+  <button (click)="mostrar=true"> Mostrar </button>
+</div>
+
+<div *ngIf="mostrar">
+  <p> Ejemplo </p>
+  <button (click)="mostrar=false"> Ocultar </button>
+</div>
+
+</div>
+
+
